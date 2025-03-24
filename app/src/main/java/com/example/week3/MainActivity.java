@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.content.Intent;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -35,10 +36,20 @@ public class MainActivity extends AppCompatActivity {
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, com.example.week3.SecondActivity.class);
                 String student_str = student_type.getText().toString();
-                result.setText(student_str);
+                myIntent.putExtra("student_write", student_str);
+                startActivityForResult(myIntent, 99);
             }
         });
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 99 && resultCode == 66) {
+            String fixed = data.getStringExtra("fixed");
+            result.setText(fixed);
+        }
     }
 }
