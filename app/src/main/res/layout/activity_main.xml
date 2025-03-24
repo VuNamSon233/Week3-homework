@@ -52,7 +52,6 @@
         android:layout_below="@id/teacherFix_TextView"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
-        android:text="CC"
         android:textSize="20sp" />
 
 </RelativeLayout>
