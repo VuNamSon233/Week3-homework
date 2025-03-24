@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/studentWrite_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Học sinh viết"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/studentWrite_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/studentWrite_TextView"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="abc"
+        android:inputType="text"
+        android:minWidth="120dp"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/buttonAssign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teacherFix_received"
+        android:layout_centerHorizontal="true"
+        android:text="NỘP BÀI" />
+
+    <TextView
+        android:id="@+id/teacherFix_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/studentWrite_Text"
+        android:layout_centerHorizontal="true"
+        android:text="Cô giáo sửa"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/teacherFix_received"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teacherFix_TextView"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="CC"
+        android:textSize="20sp" />
+
+</RelativeLayout>
