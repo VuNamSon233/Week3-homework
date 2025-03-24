@@ -29,7 +29,7 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String teacher_type = teacher_fix.getText().toString();
                 myIntent.putExtra("fixed", teacher_type);
-                setResult(33, myIntent);
+                setResult(66, myIntent);
                 finish();
             }
         });
